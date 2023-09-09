@@ -22,7 +22,7 @@ class SearchView : AppCompatActivity() {
 
         binding.lvLista.adapter = adapter //le paso la lista de paises por medio de un adapter a el listView
 
-        //Haciendo la consulta en el cuado de busqueda:
+        //Haciendo la consulta en el cuadro de busqueda:
         binding.svBuscar.setOnQueryTextListener(object:androidx.appcompat.widget.SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
                 //aqui hago la consulta:

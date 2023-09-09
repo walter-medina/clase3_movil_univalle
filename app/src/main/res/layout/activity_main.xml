@@ -64,7 +64,7 @@
             android:indeterminate="false"
             android:indeterminateTint="@color/naranja"
             android:max="100"
-            android:progress="1"/>
+            android:progress="5"/>
 
         <!--Ejemplo SeekBar,con implementacion -->
         <SeekBar
@@ -92,7 +92,7 @@
             android:numStars="5"
             android:rating="3"
             android:progressTint="@color/amarillo"
-            android:stepSize="1" />
+            android:stepSize="0.5" />
 
 
         <!--Contenedor Linear Layout, sus componentes se ubicaran de manera horizontal -->

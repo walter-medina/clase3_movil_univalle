@@ -15,15 +15,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
-        //numberPicker()
-//        GlobalScope.launch {
-//            progressBarHorizonal()
-//        }
-        //seekBarStandar()
-        //ratingBar()
-        //irAWebView()
+        numberPicker()
+        GlobalScope.launch {
+            progressBarHorizonal()
+        }
+        seekBarStandar()
+        ratingBar()
+        irAWebView()
         irASearchView()
-        //irAVideoView()
+        irAVideoView()
 
     }
 
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun ratingBar(){
-        binding.rbStart.setOnRatingBarChangeListener { ratingBar, rating, fromUser ->
+        binding.rbStart.setOnRatingBarChangeListener { _, rating, _ ->
             binding.tvData.text = "Tu calificación es: ${rating}"
         }
 
