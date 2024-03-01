@@ -17,7 +17,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/imagen_test"
+            android:src="@drawable/imagen_prueba"
             android:scaleType="centerCrop" />
 
         <!--Ejemplo DataPicker, solo la parte visual -->
@@ -42,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            tools:text="valor"
             android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/naranja"
@@ -109,22 +110,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="WebView"
-                android:layout_marginEnd="3dp" />
+                android:layout_marginEnd="20dp" />
 
             <Button
                 android:id="@+id/btnSearchView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SearchView" />
-
-            <Button
-                android:id="@+id/btnVideoView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="VideoView"
-                android:layout_marginEnd="3dp" />
-
-
 
         </LinearLayout>
 

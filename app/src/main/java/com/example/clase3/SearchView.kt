@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.SearchView
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.clase3.databinding.ActivityMainBinding
 import com.example.clase3.databinding.ActivitySearchViewBinding
@@ -17,7 +18,7 @@ class SearchView : AppCompatActivity() {
     }
 
     private  fun searchView(){
-        val listaPaises = arrayOf("Colombia", "España","Ecuador", "Argentina", "Panamá")
+        val listaPaises = arrayOf("Colombia", "España","Ecuador", "Egipto", "Panamá")
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaPaises)
 
         binding.lvLista.adapter = adapter //le paso la lista de paises por medio de un adapter a el listView
@@ -25,20 +26,18 @@ class SearchView : AppCompatActivity() {
         //Haciendo la consulta en el cuadro de busqueda:
         binding.svBuscar.setOnQueryTextListener(object:androidx.appcompat.widget.SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
-                //aqui hago la consulta:
-                if(listaPaises.contains(query)) adapter.filter.filter((query))
-                return false
-
+                //Ejecuta la busqueda al dar clic en el boton buscar del teclado por defecto:
+                if(!query.isNullOrEmpty()){
+                    Toast.makeText(this@SearchView, "Buscar ... ${query}", Toast.LENGTH_LONG).show()
+                }
+                return true
             }
 
             override fun onQueryTextChange(query: String?): Boolean {
-                //para detectar los cambios al momento de escribir
+                //Detecta las letras que se introducen en la caja y hace el filtro y lo lista
                 adapter.filter.filter(query)
-                return false
+                return true
             }
-
         })
-
-
     }
 }
