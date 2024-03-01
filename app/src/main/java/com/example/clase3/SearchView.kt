@@ -17,7 +17,7 @@ class SearchView : AppCompatActivity() {
     }
 
     private  fun searchView(){
-        val listaPaises = arrayOf("Colombia", "España","Ecuador", "Argentina", "Panamá")
+        val listaPaises = arrayOf("Colombia", "España","Ecuador", "Egipto", "Panamá")
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaPaises)
 
         binding.lvLista.adapter = adapter //le paso la lista de paises por medio de un adapter a el listView
@@ -27,14 +27,14 @@ class SearchView : AppCompatActivity() {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 //aqui hago la consulta:
                 if(listaPaises.contains(query)) adapter.filter.filter((query))
-                return false
+                return true
 
             }
 
             override fun onQueryTextChange(query: String?): Boolean {
                 //para detectar los cambios al momento de escribir
                 adapter.filter.filter(query)
-                return false
+                return true
             }
 
         })

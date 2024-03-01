@@ -23,14 +23,11 @@ class MainActivity : AppCompatActivity() {
         ratingBar()
         irAWebView()
         irASearchView()
-        irAVideoView()
-
     }
 
     private fun numberPicker(){
         binding.numberPicker.minValue = 1
         binding.numberPicker.maxValue = 100
-
         binding.numberPicker.setOnValueChangedListener { picker, oldVal, newVal ->
             binding.tvData.text = "Resultado: ${newVal}"
         }
@@ -79,13 +76,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-    private fun irAVideoView(){
-        binding.btnVideoView.setOnClickListener {
-            val intent = Intent(this, VideoView::class.java)
-            startActivity(intent)
-        }
-    }
-
-
 }
