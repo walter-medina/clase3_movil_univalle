@@ -36,7 +36,7 @@ class SearchView : AppCompatActivity() {
             override fun onQueryTextChange(query: String?): Boolean {
                 //Detecta las letras que se introducen en la caja y hace el filtro y lo lista
                 adapter.filter.filter(query)
-                return false
+                return true
             }
         })
     }
