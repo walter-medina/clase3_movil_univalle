@@ -1,12 +1,10 @@
 package com.example.clase3
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import android.widget.SearchView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.example.clase3.databinding.ActivityMainBinding
 import com.example.clase3.databinding.ActivitySearchViewBinding
 
 class SearchView : AppCompatActivity() {
