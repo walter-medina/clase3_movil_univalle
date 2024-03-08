@@ -18,7 +18,7 @@ class SearchView : AppCompatActivity() {
     }
 
     private  fun searchView(){
-        val listaPaises = arrayOf("Colombia", "España","Ecuador", "Egipto", "Panamá")
+        val listaPaises = arrayOf("Colombia", "España","Ecuador", "Argentina", "Panamá")
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaPaises)
 
         binding.lvLista.adapter = adapter //le paso la lista de paises por medio de un adapter a el listView
