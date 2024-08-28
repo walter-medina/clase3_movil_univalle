@@ -17,7 +17,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/imagen_prueba"
+            android:src="@drawable/imagen_test"
             android:scaleType="centerCrop" />
 
         <!--Ejemplo DataPicker, solo la parte visual -->

@@ -24,10 +24,6 @@ class SearchView : AppCompatActivity() {
         //Haciendo la consulta en el cuadro de busqueda:
         binding.svBuscar.setOnQueryTextListener(object:androidx.appcompat.widget.SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
-                //Ejecuta la busqueda al dar clic en el boton buscar del teclado por defecto:
-                if(!query.isNullOrEmpty()){
-                    Toast.makeText(this@SearchView, "Buscar ... ${query}", Toast.LENGTH_LONG).show()
-                }
                 return true
             }
 
